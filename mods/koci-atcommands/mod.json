@@ -1,6 +1,6 @@
 {
-  "name": "atcommands",
-  "version": "0.0.4",
+  "name": "koci-atcommands",
+  "version": "0.0.5",
   "author": "syfqpie",
   "description": "Player @commands for everyone, each switchable in Settings.",
   "default": "off",
