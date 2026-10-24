@@ -1,8 +1,8 @@
 {
   "name": "koci-new-char",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "syfqpie",
-  "description": "Configure what a new character gets on first login: spawn map, Zeny and starter items.",
+  "description": "Configure what a new character gets on first login: spawn map, save point, Zeny and starter items.",
   "default": "off",
   "requires": { "app": ">=1.2.6", "era": "any" },
   "settings": [
@@ -31,6 +31,13 @@
       "max": 1023,
       "label": "Spawn Y",
       "description": "Y coordinate on the spawn map. 0 picks a random spot."
+    },
+    {
+      "key": "set_save_point",
+      "type": "boolean",
+      "default": true,
+      "label": "Set save point to the spawn",
+      "description": "Also make the spawn map and spot the character's save point, so they respawn there. Needs a spawn map; ignored when it is empty."
     },
     {
       "key": "start_zeny",

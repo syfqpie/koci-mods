@@ -10,7 +10,7 @@
 
 ## What it does
 
-On a character's **first login**, this mod can warp them to a map of your choice, give them Zeny and hand them a set of starter items. It is configurable under **Settings → Mods → koci-new-char**. The mod is **off by default**, and every setting defaults to "do nothing".
+On a character's **first login**, this mod can warp them to a map of your choice, make that spot their save point, give them Zeny and hand them a set of starter items. It is configurable under **Settings → Mods → koci-new-char**. The mod is **off by default**, and every setting defaults to "do nothing".
 
 ## Settings
 
@@ -18,13 +18,14 @@ On a character's **first login**, this mod can warp them to a map of your choice
 | --- | --- | --- |
 | Spawn map (`start_map`) | empty | Map name to warp to, for example `prontera`. Empty keeps the default spawn. An unknown map is skipped. |
 | Spawn X / Y (`start_x`, `start_y`) | 0 | Coordinates on that map. If either is 0, a random spot is used. |
+| Set save point to the spawn (`set_save_point`) | on | Also saves the spawn as the character's respawn point, so dying or using a Butterfly Wing returns them there. Only applies when a spawn map is set. |
 | Starting Zeny (`start_zeny`) | 0 | Zeny given on first login (up to 1,000,000,000). |
 | Starter items (`start_items`) | empty | `id:amount` pairs separated by commas, for example `501:50,601:10`. |
 | Only characters at base level 1 (`only_new_chars`) | on | Skip characters above base level 1, so existing characters don't get the pack when the mod is first enabled. |
 
 ## How it works
 
-`npc/new_char.txt` runs on `OnPCLoginEvent`. It sets a permanent character variable (`newchar_done`) first, so the reward is only ever given once, then adds the Zeny, gives the items and warps the character. Values are read through `F_ModSetting`.
+`npc/new_char.txt` runs on `OnPCLoginEvent`. It sets a permanent character variable (`newchar_done`) first, so the reward is only ever given once, then adds the Zeny, gives the items, warps the character and saves the landing spot as their save point. Values are read through `F_ModSetting`.
 
 ## Notes
 

@@ -32,6 +32,11 @@ OnPCLoginEvent:
 			warp .@map$, .@x, .@y;
 		else
 			warp .@map$, 0, 0;
+		// make the spawn the respawn point too, using wherever the character landed (a random spot when x/y are 0)
+		if (callfunc("F_ModSetting", "koci-new-char", "set_save_point", 1)) {
+			getmapxy(.@savemap$, .@savex, .@savey, 0);
+			save .@savemap$, .@savex, .@savey;
+		}
 	}
 	end;
 }
