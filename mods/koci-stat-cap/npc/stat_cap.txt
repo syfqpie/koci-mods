@@ -7,10 +7,10 @@ OnInit:
 		"max_extended_parameter", "max_summoner_parameter", "max_fourth_parameter";
 	for (.@i = 0; .@i < getarraysize(.@flags$); .@i++) {
 		// getbattleflag returns 0 for a flag this server does not have
-		if (getbattleflag(.@flags$[.@i])) {
+		if (getbattleflag(.@flags$[.@i]))
 			setbattleflag .@flags$[.@i], .@cap;
-			debugmes "koci-stat-cap: " + .@flags$[.@i] + " = " + getbattleflag(.@flags$[.@i]);
-		}
 	}
+	// per-job max stats are copied from these flags when the player db loads, so reload it
+	atcommand "@reloadpcdb";
 	end;
 }

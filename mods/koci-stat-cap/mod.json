@@ -1,6 +1,6 @@
 {
   "name": "koci-stat-cap",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "syfqpie",
   "description": "Sets the maximum value of STR/AGI/VIT/INT/DEX/LUK for every job category, including transcendent, baby, third, fourth and summoner classes.",
   "default": "off",
