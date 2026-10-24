@@ -10,9 +10,12 @@ OnPCLoginEvent:
 
 	.@items$ = callfunc("F_ModSetting", "koci-new-char", "start_items", "");
 	if (.@items$ != "") {
-		.@n = explode(.@pairs$, .@items$, ",");
-		for (.@i = 0; .@i < .@n; .@i++) {
-			if (explode(.@pair$, .@pairs$[.@i], ":") != 2) continue;
+		// explode returns nothing; read the piece count from the array afterwards
+		explode(.@pairs$, .@items$, ",");
+		for (.@i = 0; .@i < getarraysize(.@pairs$); .@i++) {
+			deletearray .@pair$[0], getarraysize(.@pair$);
+			explode(.@pair$, .@pairs$[.@i], ":");
+			if (getarraysize(.@pair$) != 2) continue;
 			.@id = atoi(.@pair$[0]);
 			.@amount = atoi(.@pair$[1]);
 			if (.@id > 0 && .@amount > 0)

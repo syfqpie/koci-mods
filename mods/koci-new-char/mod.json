@@ -1,6 +1,6 @@
 {
   "name": "koci-new-char",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "syfqpie",
   "description": "Configure what a new character gets on first login: spawn map, Zeny and starter items.",
   "default": "off",
