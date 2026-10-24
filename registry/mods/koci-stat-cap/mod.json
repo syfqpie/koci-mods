@@ -1,0 +1,12 @@
+{
+  "name": "koci-stat-cap",
+  "author": "syfqpie",
+  "description": "Raises the maximum STR/AGI/VIT/INT/DEX/LUK for every job category (normal, transcendent, baby, third, fourth, summoner) to a value you choose, 500 by default.",
+  "tags": ["stats", "rebalance", "cheats"],
+  "icon": "icon.png",
+  "homepage": "https://github.com/syfqpie/koci-mods",
+  "source": {
+    "github": "syfqpie/koci-mods",
+    "asset": "koci-stat-cap.zip"
+  }
+}

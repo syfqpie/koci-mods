@@ -1,0 +1,12 @@
+{
+  "name": "koci-new-char",
+  "author": "syfqpie",
+  "description": "Configure what a new character gets on first login: spawn map and coordinates, starting Zeny and starter items.",
+  "tags": ["new-character", "quality-of-life", "items"],
+  "icon": "icon.png",
+  "homepage": "https://github.com/syfqpie/koci-mods",
+  "source": {
+    "github": "syfqpie/koci-mods",
+    "asset": "koci-new-char.zip"
+  }
+}

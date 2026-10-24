@@ -1,0 +1,12 @@
+{
+  "name": "koci-atcommands",
+  "author": "syfqpie",
+  "description": "Gives every player @commands such as @item, @zeny, @refine, @str and @monster, with each of 38 commands switchable in Settings.",
+  "tags": ["atcommands", "commands", "cheats", "quality-of-life"],
+  "icon": "icon.png",
+  "homepage": "https://github.com/syfqpie/koci-mods",
+  "source": {
+    "github": "syfqpie/koci-mods",
+    "asset": "koci-atcommands.zip"
+  }
+}
