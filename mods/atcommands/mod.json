@@ -1,9 +1,279 @@
 {
   "name": "atcommands",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "syfqpie",
-  "description": "For fun.",
+  "description": "Player @commands for everyone, each switchable in Settings.",
   "default": "off",
-  "requires": { "app": ">=1.2.6", "era": "any" },
-  "settings": []
+  "requires": {
+    "app": ">=1.2.6",
+    "era": "any"
+  },
+  "settings": [
+    {
+      "key": "baselevelup",
+      "type": "boolean",
+      "default": true,
+      "label": "Character: Raise your base level (@baselevelup)",
+      "description": "Raises your base level the desired number of levels."
+    },
+    {
+      "key": "joblevelup",
+      "type": "boolean",
+      "default": true,
+      "label": "Character: Raise your job level (@joblevelup)",
+      "description": "Raises your job level the desired number of levels."
+    },
+    {
+      "key": "jobchange",
+      "type": "boolean",
+      "default": true,
+      "label": "Character: Change job (@jobchange)",
+      "description": "Changes your job."
+    },
+    {
+      "key": "allskill",
+      "type": "boolean",
+      "default": true,
+      "label": "Character: Get all skills (@allskill)",
+      "description": "Gives you all skills."
+    },
+    {
+      "key": "charcommands",
+      "type": "boolean",
+      "default": true,
+      "label": "Character: List character commands (@charcommands)",
+      "description": "Displays a list of charcommands that you can use."
+    },
+    {
+      "key": "str",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise STR (@str)",
+      "description": "Raises STR by given amount."
+    },
+    {
+      "key": "agi",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise AGI (@agi)",
+      "description": "Raises AGI by given amount."
+    },
+    {
+      "key": "vit",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise VIT (@vit)",
+      "description": "Raises VIT by given amount."
+    },
+    {
+      "key": "int",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise INT (@int)",
+      "description": "Raises INT by given amount."
+    },
+    {
+      "key": "dex",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise DEX (@dex)",
+      "description": "Raises DEX by given amount."
+    },
+    {
+      "key": "luk",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise LUK (@luk)",
+      "description": "Raises LUK by given amount."
+    },
+    {
+      "key": "pow",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise POW (@pow)",
+      "description": "Raises POW by given amount."
+    },
+    {
+      "key": "sta",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise STA (@sta)",
+      "description": "Raises STA by given amount."
+    },
+    {
+      "key": "spl",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise SPL (@spl)",
+      "description": "Raises SPL by given amount."
+    },
+    {
+      "key": "con",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise CON (@con)",
+      "description": "Raises CON by given amount."
+    },
+    {
+      "key": "crt",
+      "type": "boolean",
+      "default": true,
+      "label": "Stats: Raise CRT (@crt)",
+      "description": "Raises CRT by given amount."
+    },
+    {
+      "key": "item",
+      "type": "boolean",
+      "default": true,
+      "label": "Items: Spawn an item (@item)",
+      "description": "Gives you the desired item."
+    },
+    {
+      "key": "refine",
+      "type": "boolean",
+      "default": true,
+      "label": "Items: Refine equipment (@refine)",
+      "description": "Refines the equipment in a given position by a +/- amount."
+    },
+    {
+      "key": "grade",
+      "type": "boolean",
+      "default": true,
+      "label": "Items: Grade equipment (@grade)",
+      "description": "Changes the grade of the equipment in a given position by a +/- amount."
+    },
+    {
+      "key": "costume",
+      "type": "boolean",
+      "default": true,
+      "label": "Items: Change costume (@costume)",
+      "description": "Changes the player's visible appearance to the selected costume."
+    },
+    {
+      "key": "zeny",
+      "type": "boolean",
+      "default": true,
+      "label": "Economy: Get Zeny (@zeny)",
+      "description": "Gives you the desired amount of Zeny."
+    },
+    {
+      "key": "cash",
+      "type": "boolean",
+      "default": true,
+      "label": "Economy: Get cash points (@cash)",
+      "description": "Gives you the specified amount of cash points."
+    },
+    {
+      "key": "points",
+      "type": "boolean",
+      "default": true,
+      "label": "Economy: Get Kafra points (@points)",
+      "description": "Gives you the specified amount of Kafra Points."
+    },
+    {
+      "key": "autoloot",
+      "type": "boolean",
+      "default": true,
+      "label": "Loot: Autoloot (@autoloot)",
+      "description": "Makes items go straight into your inventory."
+    },
+    {
+      "key": "autolootitem",
+      "type": "boolean",
+      "default": true,
+      "label": "Loot: Autoloot by item (@autolootitem)",
+      "description": "Makes items of specific item IDs go straight into your inventory."
+    },
+    {
+      "key": "monster",
+      "type": "boolean",
+      "default": true,
+      "label": "Monsters: Spawn a monster (@monster)",
+      "description": "Spawns the desired monster."
+    },
+    {
+      "key": "mobsearch",
+      "type": "boolean",
+      "default": true,
+      "label": "Monsters: Find a monster on this map (@mobsearch)",
+      "description": "Shows the location of a certain monster on the current map."
+    },
+    {
+      "key": "whereis",
+      "type": "boolean",
+      "default": true,
+      "label": "Monsters: Where a monster spawns (@whereis)",
+      "description": "Displays the maps in which a monster normally spawns."
+    },
+    {
+      "key": "whodrops",
+      "type": "boolean",
+      "default": true,
+      "label": "Monsters: Who drops an item (@whodrops)",
+      "description": "Shows who drops an item (monster with highest drop rates)."
+    },
+    {
+      "key": "hatch",
+      "type": "boolean",
+      "default": true,
+      "label": "Pets & Homunculus: Hatch a pet egg (@hatch)",
+      "description": "Creates a pet from your inventory eggs list."
+    },
+    {
+      "key": "homevolution",
+      "type": "boolean",
+      "default": true,
+      "label": "Pets & Homunculus: Evolve homunculus (@homevolution)",
+      "description": "Evolves your homunculus, if possible."
+    },
+    {
+      "key": "homfriendly",
+      "type": "boolean",
+      "default": true,
+      "label": "Pets & Homunculus: Set homunculus intimacy (@homfriendly)",
+      "description": "Sets your homunculus intimacy level to the desired value (0-1000)."
+    },
+    {
+      "key": "hominfo",
+      "type": "boolean",
+      "default": true,
+      "label": "Pets & Homunculus: Show homunculus stats (@hominfo)",
+      "description": "Displays homunculus stats."
+    },
+    {
+      "key": "homlevel",
+      "type": "boolean",
+      "default": true,
+      "label": "Pets & Homunculus: Raise homunculus level (@homlevel)",
+      "description": "Increases the homunculus level by the given amount."
+    },
+    {
+      "key": "cart",
+      "type": "boolean",
+      "default": true,
+      "label": "Mounts: Cart (@cart)",
+      "description": "Gives or removes a cart and changes the cart skin."
+    },
+    {
+      "key": "mount_peco",
+      "type": "boolean",
+      "default": true,
+      "label": "Mounts: Job mount (@mount_peco)",
+      "description": "Gives or removes a job-based mount."
+    },
+    {
+      "key": "guild",
+      "type": "boolean",
+      "default": true,
+      "label": "Guild: Create a guild (@guild)",
+      "description": "Creates a guild."
+    },
+    {
+      "key": "guildlevelup",
+      "type": "boolean",
+      "default": true,
+      "label": "Guild: Raise guild level (@guildlevelup)",
+      "description": "Raises your guild by the desired number of levels."
+    }
+  ]
 }
