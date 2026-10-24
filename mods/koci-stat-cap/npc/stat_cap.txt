@@ -1,0 +1,14 @@
+-	script	stat_cap	-1,{
+OnInit:
+	.@cap = callfunc("F_ModSetting", "koci-stat-cap", "max_stat", 500);
+	setarray .@flags$[0],
+		"max_parameter", "max_baby_parameter", "max_trans_parameter",
+		"max_third_parameter", "max_third_trans_parameter", "max_baby_third_parameter",
+		"max_extended_parameter", "max_summoner_parameter", "max_fourth_parameter";
+	for (.@i = 0; .@i < getarraysize(.@flags$); .@i++) {
+		// getbattleflag returns 0 for a flag this server does not have
+		if (getbattleflag(.@flags$[.@i]))
+			setbattleflag .@flags$[.@i], .@cap;
+	}
+	end;
+}

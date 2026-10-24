@@ -15,7 +15,7 @@ A collection of mods for Ragnarok Offline, kept "for fun". There is no build sys
   - `settings`: mod-specific settings
 - Other files under `mods/<mod_name>/` mirror the game's data layout. For example, `conf/groups.yml` is a rAthena-style `PLAYER_GROUP_DB` that enables `@atcommands` by listing them under `Commands:` for group `Id: 0`.
 - Settings schema and modding reference: https://github.com/Flux159/ragnarokoffline.app/blob/main/docs/MODDING.md. Settings are a flat list of `{key, type, default, label, description}` with `type` of `boolean`, `number` or `string`. There is no category/grouping support and a mod may declare at most 40 settings.
-- `atcommands` is currently the only mod. Each at-command is a boolean setting whose `key` is the rAthena command name; `conf/when/<key>/groups.yml` is merged in only while that setting is on. To add an at-command, add a setting plus that file (titles/descriptions come from rAthena's `conf/atcommands.yml`). Categories are shown as a `Category:` prefix in `label`.
+- `koci-atcommands` is the mod that holds the at-commands. Each at-command is a boolean setting whose `key` is the rAthena command name; `conf/when/<key>/groups.yml` is merged in only while that setting is on. To add an at-command, add a setting plus that file (titles/descriptions come from rAthena's `conf/atcommands.yml`). Categories are shown as a `Category:` prefix in `label`.
 
 ## Development Guidelines
 

@@ -1,0 +1,60 @@
+{
+  "name": "koci-new-char",
+  "version": "0.0.1",
+  "author": "syfqpie",
+  "description": "Configure what a new character gets on first login: spawn map, Zeny and starter items.",
+  "default": "off",
+  "requires": { "app": ">=1.2.6", "era": "any" },
+  "settings": [
+    {
+      "key": "start_map",
+      "type": "string",
+      "default": "",
+      "max_length": 30,
+      "label": "Spawn map",
+      "description": "Map name new characters are warped to on first login (e.g. prontera). Leave empty to keep the default spawn."
+    },
+    {
+      "key": "start_x",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 1023,
+      "label": "Spawn X",
+      "description": "X coordinate on the spawn map. 0 picks a random spot."
+    },
+    {
+      "key": "start_y",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 1023,
+      "label": "Spawn Y",
+      "description": "Y coordinate on the spawn map. 0 picks a random spot."
+    },
+    {
+      "key": "start_zeny",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 1000000000,
+      "label": "Starting Zeny",
+      "description": "Zeny given to a new character on first login."
+    },
+    {
+      "key": "start_items",
+      "type": "string",
+      "default": "",
+      "max_length": 200,
+      "label": "Starter items",
+      "description": "Items given on first login as id:amount pairs separated by commas, e.g. 501:50,601:10."
+    },
+    {
+      "key": "only_new_chars",
+      "type": "boolean",
+      "default": true,
+      "label": "Only characters at base level 1",
+      "description": "Skip characters above base level 1, so existing characters do not get the starter pack when the mod is first enabled."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "koci-stat-cap",
+  "version": "0.0.1",
+  "author": "syfqpie",
+  "description": "Sets the maximum value of STR/AGI/VIT/INT/DEX/LUK for every job category, including transcendent, baby, third, fourth and summoner classes.",
+  "default": "off",
+  "requires": { "app": ">=1.2.6", "era": "any" },
+  "settings": [
+    {
+      "key": "max_stat",
+      "type": "number",
+      "default": 500,
+      "min": 1,
+      "max": 999,
+      "label": "Maximum stat value",
+      "description": "Highest value STR, AGI, VIT, INT, DEX and LUK can reach, for all job categories."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+-	script	new_char	-1,{
+OnPCLoginEvent:
+	// once per character; set before anything else so a failure never repeats the reward
+	if (newchar_done) end;
+	set newchar_done, 1;
+	if (callfunc("F_ModSetting", "koci-new-char", "only_new_chars", 1) && BaseLevel > 1) end;
+
+	.@zeny = callfunc("F_ModSetting", "koci-new-char", "start_zeny", 0);
+	if (.@zeny > 0) Zeny += .@zeny;
+
+	.@items$ = callfunc("F_ModSetting", "koci-new-char", "start_items", "");
+	if (.@items$ != "") {
+		.@n = explode(.@pairs$, .@items$, ",");
+		for (.@i = 0; .@i < .@n; .@i++) {
+			if (explode(.@pair$, .@pairs$[.@i], ":") != 2) continue;
+			.@id = atoi(.@pair$[0]);
+			.@amount = atoi(.@pair$[1]);
+			if (.@id > 0 && .@amount > 0)
+				getitem .@id, .@amount;
+		}
+	}
+
+	.@map$ = callfunc("F_ModSetting", "koci-new-char", "start_map", "");
+	// getmapusers is -1 for a map the server does not have
+	if (.@map$ != "" && getmapusers(.@map$) >= 0) {
+		.@x = callfunc("F_ModSetting", "koci-new-char", "start_x", 0);
+		.@y = callfunc("F_ModSetting", "koci-new-char", "start_y", 0);
+		if (.@x > 0 && .@y > 0)
+			warp .@map$, .@x, .@y;
+		else
+			warp .@map$, 0, 0;
+	}
+	end;
+}
